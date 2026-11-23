@@ -1,0 +1,40 @@
+@inject TodoService todoService
+
+@if (IsOpen)
+{
+    
+<div class="modal-wrapper" @onclick="Stäng">
+    <div class="modal" onclick=":stopPropagation">
+        <h3>Nytt att göra</h3>
+    <EditForm Model="form" OnValidSubmit="SkapaAsync">
+        <DataAnnotationsValidator />
+        <InputText @bind-Value="form!.Titel" aria-placeholder="Titel.."/>
+        <ValidationMessage For="() => form.Titel"/>
+        <InputDate @bind-Value="form.Slutdatum"/>
+        <div class="modal-actions">
+        <button class="btn-primary" type="submit">Lägg till</button>
+        <button type="button" @onclick="Stäng">Avbryt</button>
+        </div>
+    </EditForm>
+    </div>
+</div>
+}       
+
+
+@code{
+    [Parameter] public bool IsOpen {get; set;}
+    [Parameter] public EventCallback<bool> IsOpenChanged {get; set;}
+    [Parameter] public EventCallback OnCreated {get; set;}
+
+    SkapaTodoForm form = new();
+
+    async Task SkapaAsync(){
+        await todoService.CreateAsync(form);
+    }
+
+    async Task Stäng()
+    {
+        await IsOpenChanged.InvokeAsync(false);
+    }
+
+}

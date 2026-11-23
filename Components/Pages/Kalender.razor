@@ -1,0 +1,30 @@
+@page "/kalender"
+@using System.Runtime.ExceptionServices
+@inject TodoService todoService
+
+<a href="/kalender?month=@Month.AddMonths(-1).ToString("yyyy-MM")">
+<i class="bi bi-left-arrow"></i>
+</a>
+<h2>@Month.ToString("MMMM yyyy")</h2>
+<a href="/kalender?month=@Month.AddMonths(1).ToString("yyyy-MM")"></a>
+
+@code{
+    [SupplyParameterFromQuery(Name = "month")] public string? MonthParam {get; set;}
+    DateOnly Month => DateOnly.TryParseExact(MonthParam + "-01", "yyyy-MM-dd", out var m)
+    ? m : new DateOnly(DateTime.Today.Year, DateTime.Today.Month, 1);
+
+    List<TodoModell> todos = [];
+
+    protected override async Task OnParametersSetAsync()
+    {
+        var start = StartpåGrid(Month);
+        todos = await todoService.GetRangeAsync(start, start.AddDays(41));
+
+    }
+
+    static DateOnly StartpåGrid(DateOnly första)
+    {
+        första = första.AddDays(-(((int)första.DayOfWeek + 6) % 7));
+        return första;
+    }
+}

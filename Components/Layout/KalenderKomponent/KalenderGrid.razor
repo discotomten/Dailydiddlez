@@ -1,0 +1,26 @@
+<div class="kalender-grid">
+    @foreach(var dag in Dagar)
+    {
+        <div class="day-card @(dag.Month != Månad.Month ? "muted" : "")">
+            <span class="day-number">@dag.Day</span>
+
+        </div>
+    }
+</div>
+
+@code{
+    [Parameter] public List<TodoModell> todos {get; set;} = [];
+    [Parameter] public DateOnly Månad {get; set;}
+
+    Dictionary<DateOnly, List<TodoModell>> förDag = [];
+    IEnumerable<DateOnly> Dagar {get; set;} = [];
+
+    protected override void OnParametersSet()
+    {
+        var start = Månad.AddDays(-(((int)Månad.DayOfWeek + 6) % 7));
+        Dagar = Enumerable.Range(0, 42).Select(start.AddDays);
+        förDag = todos.Where(t => t.Slutdatum.HasValue)
+                    .GroupBy(t => t.Slutdatum!.Value)
+                    .ToDictionary(g => g.Key, g => g.ToList());
+    }
+}

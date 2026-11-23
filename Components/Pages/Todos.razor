@@ -1,0 +1,27 @@
+@page "/todos"
+@rendermode InteractiveServer
+@using blazorHome.Components.Layout.TodoKomponent
+@inject TodoService todoService
+@inject NavigationManager nav
+
+<div class="todo-header">
+    <button class="btn-primary">Ny todo</button>
+</div>
+
+<div class="card-grid">
+    @foreach(var t in todos)
+    {
+        <TodoCard todo="t" />
+    }    
+</div>
+
+@code{
+    bool visaSkapa;
+    List<TodoModell> todos = [];
+    protected override async Task OnInitializedAsync() => await LaddaAsync();
+
+    public async Task LaddaAsync()
+    {
+        todos = await todoService.GetAllAsync();
+    }
+}

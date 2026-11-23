@@ -1,0 +1,10 @@
+.todo-card[b-5a8da4dpmo]{
+    border-radius: 1em;
+    width: 250px;
+    height: 200px;
+    border: 2px solid #000;
+    border-left: 5px solid yellow;
+}
+.todo-card:hover[b-5a8da4dpmo]{
+    transform: scale(1);
+}

@@ -1,0 +1,14 @@
+
+<div class="todo-card @(Komprimerad ? "komprimera" : "") @(todo.ÄrFärdig ? "klar" : "")">
+<strong>@todo.Titel</strong>
+    @if (!Komprimerad)
+    {
+       <p>@todo.Beskrivning</p>
+       @if(@todo.Slutdatum is {} datum) {<small>@datum.ToString("d MMM")</small>} 
+    }
+</div>
+
+@code{
+[Parameter, EditorRequired] public TodoModell todo {get; set;} = default!;
+[Parameter] public bool Komprimerad {get; set;}
+}
