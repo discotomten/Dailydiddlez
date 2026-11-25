@@ -5,7 +5,7 @@
 @inject NavigationManager nav
 
 <div class="todo-header">
-    <button class="btn-primary">Ny todo</button>
+    <button @onclick="() => visaSkapa= true" class="btn-main">Ny todo</button>
 </div>
 
 <div class="card-grid">
@@ -14,14 +14,26 @@
         <TodoCard todo="t" />
     }    
 </div>
+<SkapaModal @bind-IsOpen="visaSkapa" OnCreated="LaddaAsync"/>
 
 @code{
     bool visaSkapa;
+    string? felmeddelande;
+
     List<TodoModell> todos = [];
     protected override async Task OnInitializedAsync() => await LaddaAsync();
 
     public async Task LaddaAsync()
     {
         todos = await todoService.GetAllAsync();
+    }
+
+    public async Task TaBortAsync(int id)
+    {
+        if(!await todoService.DeleteAsync(id))
+        {
+           felmeddelande = "Uppgiften finns inte längre"; 
+        }
+        await LaddaAsync();
     }
 }

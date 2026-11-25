@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using blazorHome.Data;
 using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 public class TodoService(IDbContextFactory<AppDbContext> factory)
 {
@@ -35,4 +36,21 @@ public class TodoService(IDbContextFactory<AppDbContext> factory)
 
         await db.SaveChangesAsync();
         }
+    
+    public async Task<bool> DeleteAsync(long id)
+    {
+        await using var db = await factory.CreateDbContextAsync();
+
+        var todo = await db.Todos.FindAsync(id)
+            ?? throw new KeyNotFoundException($"Todo med id {id} hittades inte");
+        
+        if(todo is null)
+        {
+            return false;
+        }
+        
+        db.Todos.Remove(todo);
+        await db.SaveChangesAsync();
+        return true;
+    }
 }

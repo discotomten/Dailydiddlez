@@ -39,10 +39,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcS2FsZW5kZXJLb21wb25lbnRcS2FsZW5kZXJHcmlkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/linka/Desktop/RazorpagesProj/blazorHome/Components/Layout/TodoKomponent/SkapaModal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcVG9kb0tvbXBvbmVudFxTa2FwYU1vZGFsLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/linka/Desktop/RazorpagesProj/blazorHome/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -86,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope = b-ipc9902w08
 [C:/Users/linka/Desktop/RazorpagesProj/blazorHome/Components/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-24mspizmxo
+
+[C:/Users/linka/Desktop/RazorpagesProj/blazorHome/Components/Layout/TodoKomponent/SkapaModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcVG9kb0tvbXBvbmVudFxTa2FwYU1vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-tp47im1o4i
 
 [C:/Users/linka/Desktop/RazorpagesProj/blazorHome/Components/Layout/TodoKomponent/TodoCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcVG9kb0tvbXBvbmVudFxUb2RvQ2FyZC5yYXpvcg==

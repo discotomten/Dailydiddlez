@@ -361,14 +361,104 @@ main[b-8bs1cdv9lh] {
         opacity: 0;
     }
 }
-/* /Components/Layout/TodoKomponent/TodoCard.razor.rz.scp.css */
-.todo-card[b-5a8da4dpmo]{
-    border-radius: 1em;
-    width: 250px;
-    height: 200px;
-    border: 2px solid #000;
-    border-left: 5px solid yellow;
+/* /Components/Layout/TodoKomponent/SkapaModal.razor.rz.scp.css */
+
+.modal-wrapper[b-tp47im1o4i]{
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0/ .4);
+    display: grid;
+    place-items: center;
+    z-index: 999;
 }
-.todo-card:hover[b-5a8da4dpmo]{
-    transform: scale(1);
+.todo-modal[b-tp47im1o4i]{
+    background: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 5rem 2rem;
+    width: min(90vw, 420px);
+    box-shadow: 0 10px 30px rgb(0 0 0 / .2);
+}
+.modal-actions[b-tp47im1o4i]{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+/* /Components/Layout/TodoKomponent/TodoCard.razor.rz.scp.css */
+/* Grundkort */
+.todo-card[b-5a8da4dpmo] {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 3px rgb(0 0 0 / .08);
+    transition: box-shadow .15s;
+}
+
+.todo-card:hover[b-5a8da4dpmo] {
+    box-shadow: 0 4px 12px rgb(0 0 0 / .12);
+}
+
+.todo-card strong[b-5a8da4dpmo] {
+    font-size: 1rem;
+}
+
+.todo-card p[b-5a8da4dpmo] {
+    margin: 0;
+    color: #555;
+    font-size: .9rem;
+}
+
+.todo-card small[b-5a8da4dpmo] {
+    color: #888;
+}
+
+/* Knappar */
+.btn-main[b-5a8da4dpmo],
+.btn-second[b-5a8da4dpmo] {
+    padding: .35rem .75rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: .85rem;
+}
+
+.btn-main[b-5a8da4dpmo] {
+    background: tomato;
+    color: white;
+}
+
+.btn-second[b-5a8da4dpmo] {
+    background: transparent;
+    border-color: #ccc;
+    color: #555;
+}
+
+/* Komprimerad – används i kalendern */
+.todo-card.komprimera[b-5a8da4dpmo] {
+    padding: .25rem .5rem;
+    gap: 0;
+    border-radius: 6px;
+    box-shadow: none;
+    font-size: .8rem;
+}
+
+.todo-card.komprimera strong[b-5a8da4dpmo] {
+    font-size: .8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Klar */
+.todo-card.klar[b-5a8da4dpmo] {
+    opacity: .6;
+}
+
+.todo-card.klar strong[b-5a8da4dpmo] {
+    text-decoration: line-through;
 }

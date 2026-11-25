@@ -6,6 +6,8 @@
        <p>@todo.Beskrivning</p>
        @if(@todo.Slutdatum is {} datum) {<small>@datum.ToString("d MMM")</small>} 
     }
+    <button class="btn-main">Markera klar</button>
+    <button class="btn-second">Ta bort</button>
 </div>
 
 @code{

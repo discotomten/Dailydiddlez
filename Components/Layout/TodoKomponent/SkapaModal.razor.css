@@ -1,0 +1,22 @@
+
+.modal-wrapper{
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0/ .4);
+    display: grid;
+    place-items: center;
+    z-index: 999;
+}
+.todo-modal{
+    background: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 5rem 2rem;
+    width: min(90vw, 420px);
+    box-shadow: 0 10px 30px rgb(0 0 0 / .2);
+}
+.modal-actions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}

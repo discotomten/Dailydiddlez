@@ -255,6 +255,8 @@ C:\Users\linka\Desktop\RazorpagesProj\blazorHome\bin\Debug\net10.0\runtimes\win\
 C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\blazorHome.csproj.AssemblyReference.cache
 C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\blazorHome.csproj.Up2Date
 C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\scopedcss\Components\Layout\TodoKomponent\TodoCard.razor.rz.scp.css
-C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\compressed\6l34kqpfin-{0}-j24ozih1lr-j24ozih1lr.gz
-C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\compressed\gz9fupo5xn-{0}-j24ozih1lr-j24ozih1lr.gz
-C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\compressed\tx8rrlcfmk-{0}-fcyetg08ji-fcyetg08ji.gz
+C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\blazorHome.sourcelink.json
+C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\scopedcss\Components\Layout\TodoKomponent\SkapaModal.razor.rz.scp.css
+C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\compressed\tx8rrlcfmk-{0}-ak5hfij2t9-ak5hfij2t9.gz
+C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\compressed\6l34kqpfin-{0}-dhzg153dwt-dhzg153dwt.gz
+C:\Users\linka\Desktop\RazorpagesProj\blazorHome\obj\Debug\net10.0\compressed\gz9fupo5xn-{0}-dhzg153dwt-dhzg153dwt.gz
